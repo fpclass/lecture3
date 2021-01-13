@@ -5,7 +5,7 @@
 
 module Lecture3 where
 
-import Prelude hiding (const, fst, snd, swap, null, splitAt)
+import Prelude hiding (const, fst, snd, swap)
 
 --------------------------------------------------------------------------------
 -- Examples of typings
@@ -145,41 +145,5 @@ snd (x,y) = y
 
 swap :: (a, b) -> (b, a)
 swap (x,y) = (y,x)
-
---------------------------------------------------------------------------------
--- Parameterised types: Lists
-
-t20 :: [Int]
-t20 = [1,2,3]
-
-t21 :: [Bool]
-t21 = [True, False, True]
-
-t22 :: [String]
-t22 = ["Hello", "World"]
-
-t23 :: [[Int]]
-t23 = [[1,2,3],[3],[],[9,9]]
-
-t24 :: Int
-t24 = head [1,2,3]
-
-t25 :: [Int]
-t25 = tail [1,2,3]
-
-t26 :: [Int]
-t26 = take 2 [1,2,3]
-
-t27 :: [Int]
-t27 = drop 1 [1,2,3]
-
-null :: [a] -> Bool
-null []     = True
-null (x:xs) = False
-
---------------------------------------------------------------------------------
-
-splitAt :: Int -> [a] -> ([a],[a])
-splitAt n xs = (take n xs, drop n xs)
 
 --------------------------------------------------------------------------------
